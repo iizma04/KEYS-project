@@ -36,3 +36,34 @@ dfs = []
 for filename in os.listdir(directory):
     if filename.endswith(".tsv"):
         pandas.concat(filename)
+
+    import os 
+import pandas as pd 
+paper_path = "./2016 2/"
+
+directory = os.fsencode(paper_path)
+init_df = pd.DataFrame()
+processed_none_controller_df = pd.DataFrame
+for file in os.listdir(directory):
+    filename = os.fsdecode(file)
+    init_df = pd.concat([init_df, pd.read_csv("./2016 2/"+filename, sep= "\t")])
+   
+  # just checking if this works and gives me the first 30 rows
+  init_df.head(30)
+  
+  pattern = r'E[1-7-9]'
+
+counter = 0 
+output = ""
+for row in df ['INPUT'].str.contains(pattern):
+    if (row):
+        output = df.iloc[counter, 1]
+        df.iloc[counter, 0] = output[:-2]
+        
+        df.iloc[counter, 4].replace("Regulation", "Activation")
+        if ((output[-1] == 'u') & (df.iloc[counter, 4] == 'Regulation (Positive)')):
+            df.iloc[counter, 4].replace("Positive", "Negative")
+        else:
+            df.iloc[counter, 4].replace("Negative", "Positive")
+    counter += 1
+df[25:35]
