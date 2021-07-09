@@ -67,3 +67,11 @@ for row in df ['INPUT'].str.contains(pattern):
             df.iloc[counter, 4].replace("Negative", "Positive")
     counter += 1
 df[25:35]
+
+def processed_data (df):
+    file = file.drop(columns = cols[5:15])
+    file = file[~file['OUTPUT'].str.contains('::uaz:')]
+    file = file[~file['CONTROLLER'].str.contains('::uaz:')]
+    return file
+
+    display (processed_data (df))
