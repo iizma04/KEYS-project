@@ -69,7 +69,7 @@ for row in df ['INPUT'].str.contains(pattern):
 df[25:35]
 
 def processed_data (df):
-    file = file.drop(columns = cols[5:15])
+    file = file.drop(columns = cols[6:9])
     file = file[~file['OUTPUT'].str.contains('::uaz:')]
     file = file[~file['CONTROLLER'].str.contains('::uaz:')]
     return file
