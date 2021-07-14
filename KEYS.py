@@ -75,3 +75,11 @@ def processed_data (df):
     return file
 
     display (processed_data (df))
+
+import pandas as pd
+for file in pd.DataFrame:
+    file = file.drop(columns = cols[6:9])
+    file = file[~file['OUTPUT'].str.contains('::uaz:')]
+    file = file[~file['CONTROLLER'].str.contains('::uaz:')]
+    str.find('NONE')
+return file
