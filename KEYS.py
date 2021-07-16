@@ -76,10 +76,15 @@ def processed_data (df):
 
     display (processed_data (df))
 
+
+
 import pandas as pd
-for file in pd.DataFrame:
-    file = file.drop(columns = cols[6:9])
-    file = file[~file['OUTPUT'].str.contains('::uaz:')]
-    file = file[~file['CONTROLLER'].str.contains('::uaz:')]
-    str.find('NONE')
-return file
+import os 
+def processed_data():
+    for file in pd.read_csv("./2016 2/"+filename, sep= "\t"):
+        file = file.drop(columns = cols[6:9])
+        file = file[~file['OUTPUT'].str.contains('::uaz:')]
+        file = file[~file['CONTROLLER'].str.contains('::uaz:')]
+        return file
+      
+processed_data(pd.read_csv("./2016 2/"+filename, sep= "\t"))
